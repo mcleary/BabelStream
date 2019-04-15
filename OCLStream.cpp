@@ -106,7 +106,8 @@ OCLStream<T>::OCLStream(const unsigned int ARRAY_SIZE, const int device_index)
   if (device.getInfo<CL_DEVICE_TYPE>() & CL_DEVICE_TYPE_CPU)
   {
     dot_num_groups = device.getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>();
-    dot_wgsize     = device.getInfo<CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE>() * 2;
+    // dot_wgsize     = device.getInfo<CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE>() * 2;
+    dot_wgsize = 8;
   }
   else
   {

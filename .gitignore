@@ -17,3 +17,6 @@ hip-stream
 .DS_Store
 
 Makefile
+.vscode/
+.vs/
+CMakeSettings.json
